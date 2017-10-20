@@ -1,0 +1,16 @@
+<div>
+  <ul class="list-group contacts">
+    <li class="list-group-item" ng-if="contacts.length <= 0"><p>No Contacts!</p></li>
+    <li class="list-group-item" ng-repeat="contact in contacts track by $index">
+      <div class="actions pull-right">
+        <a href="#edit/{{$index}}" class="btn btn-primary btn-xs">Edit</a>
+        <button class="btn btn-danger btn-xs" ng-click="deleteContact($index)" >Delete</button>
+      </div>
+      <div>
+        <p class="lead"><a href="#contacts/{{$index}}">{{contact.name}}</a></p>
+        <p>{{contact.email}}</p>
+        <p><small title="{{contact.location.zip}}">{{ contact.location.city + ', ' + contact.location.state }}</small></p>
+      </div>
+    </li>
+  </ul>
+</div>

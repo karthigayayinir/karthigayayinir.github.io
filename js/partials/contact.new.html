@@ -1,0 +1,34 @@
+<div class="col-md-offset-3 col-md-6">
+  <form method="post" name="contactForm" ng-submit="addContact();">
+    <div>
+      <h4 id="addContactModalLabel">Add Contact</h4>
+    </div>
+    <div>
+        <div class="form-group">
+          <label for="name">Name</label>
+          <input type="text" class="form-control" ng-model="contact.name" required placeholder="Enter name">
+        </div>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" class="form-control" ng-model="contact.email" required placeholder="Enter Email">
+        </div>
+        <h3>Location</h3>
+        <div class="form-group">
+          <label for="city">City</label>
+          <input type="text" class="form-control" ng-model="contact.location.city" placeholder="Enter City">
+        </div>
+        <div class="form-group">
+          <label for="email">State</label>
+          <input type="text" class="form-control" ng-model="contact.location.state" placeholder="Enter State">
+        </div>
+        <div class="form-group">
+          <label for="zip">Zip</label>
+          <input type="text" class="form-control" ng-model="contact.location.zip" placeholder="Enter Zip Code">
+        </div>
+    </div>
+    <div>
+      <a href="#contacts" class="btn btn-default">Close</a>
+      <button type="submit" class="btn btn-primary addValue pull-right" ng-disabled="contactForm.$invalid">Submit</button>
+    </div>
+  </form>
+</div>

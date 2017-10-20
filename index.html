@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html ng-app="contactApp">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Demo project for AngularJS</title>
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/font-awesome.min.css">
+  <style type="text/css">
+    .contacts p, .contacts p.lead{ margin: 0; }
+    .header-actions{ display: block; margin: 20px 0 0 10px; margin-bottom: 10px; }
+    .contacts li .actions{ display: none; }
+    .contacts li:hover{ background-color: #efefef; }
+    .contacts li:hover .actions{ display: block; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <span class="header-actions pull-right">
+        <a href="#add" class="btn btn-primary">Add Contact</a>
+        <a href="#contacts" class="btn btn-primary">Contacts</a>
+    </span>
+    <h1>Angular 2 - Contact Store Application</h1>
+    <hr/>
+    <div ng-view>
+      <!-- All the views/partials will be here -->  
+    </div>
+  </div>
+  <hr/>
+  <!-- AngularJS -->
+  <script src="js/angular.min.js"></script>
+  <!-- AngularJS Router-->
+  <script src="js/angular-route.min.js"></script>
+  <!-- Contacts Store JavaScript -->
+  <script src="js/app.js"></script>
+  <script src="js/controllers.js"></script>
+</body>
+</html>
